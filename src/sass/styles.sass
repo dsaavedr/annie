@@ -1,0 +1,72 @@
+@import 'bootstrap/scss/bootstrap'
+
+$clip-start: 80%
+
+body
+  font-family: Inter, sans-serif
+
+h1, h2, h3, h4, h5, h6
+  margin: 0
+
+.cta-bar
+  color: black
+  position: fixed
+  width: 100%
+  z-index: 1
+  padding: 12px 0
+  background: rgba(255,255,255,0.4)
+  backdrop-filter: saturate(180%) blur(20px)
+
+  .title
+    font-weight: 500
+    font-size: 30px
+
+  .price
+    font-weight: 800
+    font-size: 20px
+
+  button
+    margin-left: 26px
+    color: white
+    background: black
+    border-radius: 100px
+    padding: 16px 43px
+    border: none
+    outline: none
+    font-weight: 800
+    font-size: 20px
+    line-height: 20px
+
+.hero
+  background-image: url('../assets/bg-hero.jpg')
+  background-size: cover
+  background-position: bottom
+  color: white
+  height: 60vh
+  gap: 20px
+  clip-path: polygon(0% 0%, 0% $clip-start, 50% 100%, 100% $clip-start, 100% 0%)
+  padding-top: 155px
+  justify-content: flex-start
+
+  h1
+    font-size: 74px
+
+  h2
+    font-size: 28px
+    font-weight: 400
+
+  .logo
+    margin-top: 100px
+
+  .name
+    font-size: 11.65px
+    font-weight: 700
+    font-family: "SF UI Text", Inter, sans-serif
+
+.logo
+  width: 88px
+  height: 69px
+
+  img
+    height: 100%
+    width: 100%
