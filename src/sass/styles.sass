@@ -9,20 +9,25 @@ h1, h2, h3, h4, h5, h6
   margin: 0
 
 .cta-bar
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
   color: black
   position: fixed
-  width: 100%
   z-index: 1
-  padding: 12px 0
-  background: rgba(255,255,255,0.4)
+  padding: 10px 85px 15px
+  width: 582px
+  background: rgba(255,255,255,0.6)
   backdrop-filter: saturate(180%) blur(20px)
+  margin-left: 50%
+  transform: translateX(-50%)
+  border-bottom-left-radius: 35px
+  border-bottom-right-radius: 35px
 
   .title
-    font-weight: 500
-    font-size: 30px
-
-  .price
-    font-weight: 800
+    font-weight: 400
+    line-height: 40px
     font-size: 20px
 
   button
@@ -43,10 +48,13 @@ h1, h2, h3, h4, h5, h6
   background-position: bottom
   color: white
   height: 60vh
-  gap: 20px
   clip-path: polygon(0% 0%, 0% $clip-start, 50% 100%, 100% $clip-start, 100% 0%)
-  padding-top: 155px
-  justify-content: flex-start
+  position: relative
+  display: flex
+  flex-direction: column
+  justify-content: flex-end
+  align-items: center
+  text-align: center
 
   h1
     font-size: 74px
@@ -54,19 +62,69 @@ h1, h2, h3, h4, h5, h6
   h2
     font-size: 28px
     font-weight: 400
+    margin-top: 27px
 
-  .logo
-    margin-top: 100px
+  .logo-wrapper
+    margin-top: 159px
 
   .name
     font-size: 11.65px
     font-weight: 700
     font-family: "SF UI Text", Inter, sans-serif
 
-.logo
-  width: 88px
-  height: 69px
+  .logo
+    width: 88px
+    height: 69px
 
-  img
-    height: 100%
-    width: 100%
+    img
+      height: 100%
+      width: 100%
+
+.testimonials
+  padding: 27px 0
+  line-height: 55px
+
+  .message
+    font-size: 30px
+
+  .author
+    color: #7879F1
+    font-size: 24px
+
+.course-parts
+  display: flex
+  align-items: center
+  justify-content: space-between
+  max-width: 1920px
+  padding: 0 122px
+  gap: 60px
+  flex-wrap: wrap
+  color: #374754
+
+  @media (screen and max-width: 1150px)
+    justify-content: center
+
+  .part
+    position: relative
+    border: 6px solid #252B42
+    border-radius: 40px
+    width: 422px
+    padding: 0
+
+  .day
+    position: absolute
+    top: 0
+    left: 0
+    transform: translate(-50%, -50%)
+    color: white
+    background: #252B42
+    border-radius: 50%
+    height: 93px
+    width: 93px
+    display: grid
+    place-items: center
+    font-size: 24px
+    font-weight: 600
+    
+  .title
+    font-size: 
