@@ -2,11 +2,20 @@
 
 $clip-start: 80%
 
+*
+  box-sizing: border-box
+
 body
   font-family: Inter, sans-serif
+  color: #252B42
 
 h1, h2, h3, h4, h5, h6
   margin: 0
+
+.section-title
+  font-size: 48px
+  font-weight: 700
+  margin: 77px 0 100px
 
 .cta-bar
   display: flex
@@ -91,24 +100,28 @@ h1, h2, h3, h4, h5, h6
     color: #7879F1
     font-size: 24px
 
-.course-parts
+.course-parts .content
   display: flex
   align-items: center
   justify-content: space-between
   max-width: 1920px
   padding: 0 122px
-  gap: 60px
+  gap: 173px 60px
   flex-wrap: wrap
   color: #374754
+  margin-bottom: 70px
 
   @media (screen and max-width: 1150px)
     justify-content: center
+
+  .description-wrapper
+    padding: 20px
 
   .part
     position: relative
     border: 6px solid #252B42
     border-radius: 40px
-    width: 422px
+    width: 434px
     padding: 0
 
   .day
@@ -125,6 +138,71 @@ h1, h2, h3, h4, h5, h6
     place-items: center
     font-size: 24px
     font-weight: 600
-    
+
   .title
-    font-size: 
+    font-size: 24px
+    font-weight: 700
+    margin-bottom: 20px
+
+  .description
+    margin: 0 40px
+    font-size: 18px
+    font-weight: 500
+
+.preview
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  margin-bottom: 100px
+
+  h4
+    font-size: 48px
+    margin-bottom: 50px
+
+  p
+    font-size: 18px
+    max-width: 800px
+
+  .banner
+    margin: 0 auto
+    border-radius: 45px
+    overflow: hidden
+    position: relative
+
+    .icon
+      height: 187px
+      width: 187px
+      background: #2091F9
+      border-radius: 50%
+      position: absolute
+      top: 50%
+      left: 50%
+      transform: translate(-50%, -50%)
+      display: grid
+      place-items: center
+      cursor: pointer
+
+    .triangle
+      fill: white
+
+.socials
+  display: flex
+  gap: 72px
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  margin-bottom: 300px
+
+  .social
+    background: #3E454C
+    height: 99px
+    width: 334px
+    border-radius: 13px
+    color: white
+    font-weight: 600
+    font-size: 20px
+    display: flex
+    align-items: center
+    justify-content: flex-start
+    padding: 0 30px
