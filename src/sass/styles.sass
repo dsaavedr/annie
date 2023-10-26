@@ -12,6 +12,9 @@ body
 h1, h2, h3, h4, h5, h6
   margin: 0
 
+a
+  text-decoration: none
+
 .section-title
   font-size: 48px
   font-weight: 700
@@ -25,7 +28,7 @@ h1, h2, h3, h4, h5, h6
   color: black
   position: fixed
   z-index: 1
-  padding: 10px 85px 15px
+  padding: 0 85px 15px
   width: 582px
   background: rgba(255,255,255,0.6)
   backdrop-filter: saturate(180%) blur(20px)
@@ -42,19 +45,21 @@ h1, h2, h3, h4, h5, h6
   button
     margin-left: 26px
     color: white
-    background: black
+    background: #222B32
     border-radius: 100px
     padding: 16px 43px
     border: none
     outline: none
-    font-weight: 800
     font-size: 20px
     line-height: 20px
+
+    .price
+      margin-right: 30px
 
 .hero
   background-image: url('../assets/bg-hero.jpg')
   background-size: cover
-  background-position: bottom
+  background-position: center
   color: white
   height: 60vh
   clip-path: polygon(0% 0%, 0% $clip-start, 50% 100%, 100% $clip-start, 100% 0%)
@@ -65,21 +70,40 @@ h1, h2, h3, h4, h5, h6
   align-items: center
   text-align: center
 
+  @media (max-width: 768px)
+    height: 80vh
+
   h1
     font-size: 74px
+    font-weight: 700px
+    margin: 20px 0 15px
+
+    @media (max-width: 768px)
+      font-size: 48px
 
   h2
-    font-size: 28px
+    font-size: 20px
     font-weight: 400
-    margin-top: 27px
+    @media (max-width: 768px)
+      font-size: 12px
+
+    u
+      font-size: 50px
+      font-weight: 600
+      @media (max-width: 768px)
+        font-size: 32px
 
   .logo-wrapper
-    margin-top: 159px
+    margin-top: 122px
+    @media (max-width: 768px)
+      margin-top: 80px
 
   .name
     font-size: 11.65px
     font-weight: 700
     font-family: "SF UI Text", Inter, sans-serif
+    @media (max-width: 768px)
+      margin-bottom: 40px
 
   .logo
     width: 88px
@@ -90,7 +114,7 @@ h1, h2, h3, h4, h5, h6
       width: 100%
 
 .testimonials
-  padding: 27px 0
+  padding: 63px 0
   line-height: 55px
 
   .message
@@ -113,6 +137,8 @@ h1, h2, h3, h4, h5, h6
 
   @media (screen and max-width: 1150px)
     justify-content: center
+    padding: 0
+    gap: 100px
 
   .description-wrapper
     padding: 20px
@@ -123,6 +149,15 @@ h1, h2, h3, h4, h5, h6
     border-radius: 40px
     width: 434px
     padding: 0
+
+    @media (max-width: 768px)
+      border-width: 4px
+      width: 80%
+
+    .img-wrapper
+      border-top-left-radius: 35px
+      border-top-right-radius: 35px
+      overflow: hidden
 
   .day
     position: absolute
@@ -139,13 +174,17 @@ h1, h2, h3, h4, h5, h6
     font-size: 24px
     font-weight: 600
 
+    @media (max-width: 768px)
+      height: 60px
+      width: 60px
+      font-size: 18px
+
   .title
     font-size: 24px
     font-weight: 700
     margin-bottom: 20px
 
   .description
-    margin: 0 40px
     font-size: 18px
     font-weight: 500
 
@@ -158,7 +197,8 @@ h1, h2, h3, h4, h5, h6
 
   h4
     font-size: 48px
-    margin-bottom: 50px
+    margin-bottom: 55px
+    font-weight: 700
 
   p
     font-size: 18px
@@ -169,6 +209,11 @@ h1, h2, h3, h4, h5, h6
     border-radius: 45px
     overflow: hidden
     position: relative
+    width: 100%
+
+    .img-wrapper
+      img
+        width: 100%
 
     .icon
       height: 187px
@@ -182,6 +227,14 @@ h1, h2, h3, h4, h5, h6
       display: grid
       place-items: center
       cursor: pointer
+
+      @media (max-width: 1200px)
+        height: 120px
+        width: 120px
+
+      @media (max-width: 768px)
+        height: 80px
+        width: 80px
 
     .triangle
       fill: white
@@ -206,3 +259,4 @@ h1, h2, h3, h4, h5, h6
     align-items: center
     justify-content: flex-start
     padding: 0 30px
+    gap: 20px
