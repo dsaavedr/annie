@@ -1,3 +1,5 @@
+import Glide from "@glidejs/glide";
+
 import "../sass/styles.sass";
 import logo from "../assets/logo.svg";
 import fbLogo from "../assets/fb_logo.svg";
@@ -12,6 +14,17 @@ const logos = {
 };
 
 document.onreadystatechange = () => {
+  new Glide(".glide", {
+    type: "carousel",
+    perView: 3,
+    autoplay: 3000,
+    breakpoints: {
+      800: {
+        perView: 1
+      }
+    }
+  }).mount();
+
   ["annie", "fb", "ig", "tt"].forEach(type => {
     const elements = document.getElementsByClassName(`${type}-logo`);
     [...elements].forEach(element => {

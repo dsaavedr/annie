@@ -1,4 +1,6 @@
 @import 'bootstrap/scss/bootstrap'
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.core"
+@import "node_modules/@glidejs/glide/src/assets/sass/glide.theme"
 
 $clip-start: 80%
 
@@ -36,12 +38,6 @@ a
   transform: translateX(-50%)
   border-bottom-left-radius: 35px
   border-bottom-right-radius: 35px
-
-  @media (max-width: 768px)
-    position: absolute
-    top: 0
-    left: 0
-    translate: transformX(-50%)
 
   .title
     font-weight: 400
@@ -130,11 +126,17 @@ a
   line-height: 55px
 
   .message
-    font-size: 30px
+    font-size: 24px
 
   .author
     color: #7879F1
-    font-size: 24px
+    font-size: 16px
+
+  .glide__arrow
+    color: black
+
+    @media (max-width: 768px)
+      display: none
 
 .course-parts .content
   display: flex
